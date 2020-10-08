@@ -1,0 +1,33 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+
+<body>
+<h1 align="center"> Even Number Between 1 To 500 </h1>
+<script>
+var i,num;
+for(i=0;i<=500;i++)
+{
+var isEven=false;
+       for(j=1;j<i;j++)
+        {
+                  if(i%2!=0)
+                   {
+                           break;
+                    }
+                  else
+                  {
+                         isEven=true;
+                  }
+        }      
+       if(isEven)
+       {
+                 document.write(i + " ,");
+        }
+}
+</script>
+</body> 
+
+</html>

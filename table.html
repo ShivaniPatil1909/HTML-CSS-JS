@@ -1,0 +1,23 @@
+<html>
+<head>
+<title> <b> TABLE </b> </title>
+<script type="text/javascript">
+function table()
+{
+var n,i;
+n=Number(document.getElementById("V").value);
+
+for(i=1;i<=10;i++)
+{
+              if(i<=10)
+              document.write(n + "x" + i + "=" + n*i + "<br>");
+}
+}
+</script>
+</head>
+<body>
+<h1 align="center">TABLE FORM </h1>
+Enter The Number From Table <input type="text" name=" " id="V">
+  <button onClick="table()"> submit </button>
+</body>
+</html>
