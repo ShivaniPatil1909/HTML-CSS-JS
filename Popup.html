@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function largest() {
+    large=0;
+    i=1;
+    n1 = prompt("Enter number 1 : ");
+    n2 = prompt("Enter number 2 : ");
+    n3 = prompt("Enter number 3 : ");
+   if(n1==null||n1==""||n2==null||n2==""||n3==null||n3==""){
+    	i=0;
+        warning = "1 or more numbers not entered.";
+    }else if(n1==n2 || n1==n3 || n2==n3){
+    	i=0;
+        warning = "Wrong Input";
+    }else if((n1>n2) && (n1>n3)){
+        large = n1;
+    }else if((n2>n3) && (n2>n1)){
+        large = n2;
+    }else{
+        large = n3;
+    }
+    
+    if(i==1){
+    	document.getElementById("larg").innerHTML ="Largest Number is : "+ large;
+    }else{
+    	document.getElementById("war").innerHTML = warning;
+    }
+ } 
+</script>
+</head>
+<body>
+
+<h2>Finding Largest among 3 Numbers </h2>
+Click the buttton to Enter Numbers : 
+<button onclick="largest()">Enter</button>
+<br> 
+<p id="larg"></p>
+<p id="war"></p>
+
+
+</body>
+</html>
+ 
+

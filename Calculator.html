@@ -1,0 +1,185 @@
+<html>
+<head>
+    <title>sh_hg_Calculator</title>
+    <style type="text/css">
+/*
+    The body selector is used for 
+    setting the background color 
+    of the page.
+*/
+        body{
+             background-color:#DCDCDC;
+        }
+/* 
+    This box class is used for
+    creating a box like shape around 
+    all the buttons.
+*/
+        .box{
+            background-color:#708090;
+            height:300px;
+            width:260px;
+            border-radius:10px;
+            position:relative;
+            top:80px;
+            left:40%;
+        } 
+/*
+    The display class is used here
+    for the display box shown 
+    in the calculator.
+*/
+         .display{
+            background-color:#222;
+            width:220px;
+            position:relative;
+            left:5px;
+            top:20px;
+            height:40px;
+        }
+/*
+    'CSS COMBINATORS' CONCEPT IS USED HERE
+    A combinator is something that explains the relationship between the selectors.
+    A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.
+    There are four different combinators in CSS:
+    1) descendant selector (space)
+    2) child selector (>)
+    3) adjacent sibling selector (+)
+    4) general sibling selector (~)
+    Here descendent selector is used.
+    ??DOUBT ASK??
+*/
+        .display input{
+            position:relative;
+            left:2px;
+            top:2px;
+            height:35px;
+            color:black;
+            background-color:#bccd95;
+            font-size:21px;
+            text-align:right;
+        } 
+/*
+    This class keys is used to 
+    give space between the keys and
+    the display box in the calculator.
+*/
+        .keys{
+            position:relative;
+            top:15px;
+        }
+/*
+    This class button is used to
+    style all buttons used in the
+    calculator
+*/
+        .button{
+            width:40px;
+            height:30px;
+            border:none;
+            border-radius:7px;
+            margin-left:17px;
+            cursor:pointer;
+            border-top:2px solid transparent;
+            align-self: center
+                
+        }
+/*
+    This class is used in buttons where
+    + - * / are used.
+*/
+        .pink{
+            color:black;
+            background-color:#FFFAFA;
+            border-bottom:black 2px solid;
+        }
+/*
+    This class is used in buttons where
+    no. are inputted.
+*/
+        .black{
+            color:white;
+            background-color:#303030;
+            border-bottom:black 2px solid;
+            border-top:2px #303030 solid;
+        }
+
+        .orange{
+            color:black;
+            background-color:#FF6347;
+            border-bottom:black 2px solid;
+            border-top:2px FF9933 solid;
+        }
+        .pink:active{
+            border-top:black 2px solid;
+            border-bottom:#ff4561 2px solid;
+        }
+        .black:active{
+            border-top:black 2px solid;
+            border-bottom:#303030 2px solid;
+        }
+        .orange:active{
+            border-top:black 2px solid;
+            border-bottom:FF9933 2px solid;
+        }
+        p{
+            line-height:10px;
+        }
+    </style>
+    <script type="text/javascript">
+        function c(val) { 
+            document.getElementById("d").value=val;
+        }
+        function v(val) {
+            document.getElementById("d").value+=val;
+        }
+        function e() { 
+            try { 
+                c(eval(document.getElementById("d").value)) 
+            } 
+            catch(e) {
+                c('Error') 
+            } 
+        }  
+        
+    </script>
+</head>
+<body> 
+    <div class=box align=center>
+        <div class=display><input type="text" readonly size="14" id="d"></div>
+    <div class=keys>
+    
+    <p>
+        <input type=button class="button black" value="7" onclick='v("7")'>
+        <input type=button class="button black" value="8" onclick='v("8")'>
+        <input type=button class="button black" value="9" onclick='v("9")'>
+        <input type=button class="button pink" value="+" onclick='v("+")'>
+    </p>
+    <p>
+        <input type=button class="button black" value="4" onclick='v("4")'>
+        <input type=button class="button black" value="5" onclick='v("5")'>
+        <input type=button class="button black" value="6" onclick='v("6")'>
+        <input type=button class="button pink" value="-" onclick='v("-")'>
+    </p>
+    <p>
+        <input type=button class="button black" value="1" onclick='v("1")'>
+        <input type=button class="button black" value="2" onclick='v("2")'>
+        <input type=button class="button black" value="3" onclick='v("3")'>
+        <input type=button class="button pink" value="x" onclick='v("*")'>
+    </p>
+    <p>
+        <input type=button class="button black" value="." onclick='v(".")'>
+        <input type=button class="button black" value="0" onclick='v("0")'>
+        <input type=button class="button orange" value="C" onclick='c("")'>
+        <input type=button class="button pink" value="/" onclick='v("/")'>
+    </p>
+    <p>
+        <input type=button class="button orange" value="=" onclick='e()'>
+        
+    </p>
+    
+    </div>
+    </div>
+    
+</body>
+</html>

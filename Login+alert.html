@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>Login Form And Alert Box</title>
+    <style>
+    #formcorner {
+        border-radius: 15px;
+        border: 4px solid ;
+        padding: 5px; 
+    }
+    table{
+        width:450px;
+        height:125px;
+    }
+    input[type=text] {
+        padding: 4px 4px;
+        margin: 2px 0;
+    }
+    input[type=password] {
+        padding: 4px 4px;
+        margin: 2px 0;
+    }
+    </style>
+    <script type="text/javascript">
+        function validate()
+        {
+            if( (document.shhg_form.username.value == "Web") && (document.shhg_form.password.value == "Technology"))
+            {
+                alert( "Welcome" );
+                return true;
+            }
+            else
+            {
+                alert("Wrong Username or Password!")
+                document.shhg_form.username.focus() ;
+                return false;
+            }
+            
+        }
+    </script>
+</head>
+<body bgcolor="#808080">
+<form name="shhg_form" method=get onsubmit="return(validate());">
+    <table border=0 cellpadding=2 align="center" bgcolor="#FF7F50" id="formcorner">
+    <tr>
+        <td><strong>Username :</strong>
+        <td><input type="text" name="username" placeholder="Enter your Username" >
+    </tr>
+    <tr>
+        <td><strong>Password :</strong>
+        <td><input type = "password" name="password" placeholder="Enter your Password">
+    </tr>
+    <tr>
+        <td colspan=2 align=center><input type = "submit">
+    </tr>
+    </table>
+</form>
+</body>
+</html>
